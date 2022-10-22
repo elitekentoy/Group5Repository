@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import ph.com.AllianceExam.demo.entity.Ticket;
 import ph.com.AllianceExam.demo.service.ITicketService;
 
 @RestController
@@ -50,10 +50,9 @@ public class TicketController {
 	}
 	
 	@PostMapping("/ticket/update/{id}")
-	public int udpateByID(final HttpServletRequest request) throws IOException
+	public int udpateByID(@PathVariable final int id, @RequestParam("assignee") final String assignee, @RequestParam("status") final String status, @RequestParam("subject") final String subject, @RequestParam("description") final String description, @RequestParam("tracker") final String tracker) throws IOException
 	{
-		final BufferedReader body = request.getReader();
-		return service.updateByID(body);
+		return service.updateByID(new Ticket(id, assignee, status, subject, description, tracker));
 	}
 
 
