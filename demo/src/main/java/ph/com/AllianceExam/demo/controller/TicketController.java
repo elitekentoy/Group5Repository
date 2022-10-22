@@ -43,7 +43,7 @@ public class TicketController {
 		return service.retreiveByID(id);
 	}
 
-	@DeleteMapping("/user/delete/{id}")
+	@DeleteMapping("/ticket/delete/{id}")
 	public int delete(@PathVariable final int id) throws IOException
 	{		
 		return service.deleteByID(id);
