@@ -38,7 +38,7 @@ public class Ticket {
 	public void setStatus(String status) {
 		this.status = status;
 	}
-	public String getSubejct() {
+	public String getSubject() {
 		return subject;
 	}
 	public void setSubejct(String subejct) {
