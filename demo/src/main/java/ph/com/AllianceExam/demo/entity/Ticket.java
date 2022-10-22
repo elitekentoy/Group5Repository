@@ -4,7 +4,7 @@ public class Ticket {
     private int ticketID;
 	private String assignee;
 	private String status;
-	private String subejct;
+	private String subject;
 	private String description;
 	private String tracker;
 	
@@ -14,7 +14,7 @@ public class Ticket {
 		this.ticketID = ticketID;
 		this.assignee = assignee;
 		this.status = status;
-		this.subejct = subject;
+		this.subject = subject;
 		this.description = description;
 		this.tracker = tracker;
 		
@@ -38,11 +38,11 @@ public class Ticket {
 	public void setStatus(String status) {
 		this.status = status;
 	}
-	public String getSubejct() {
-		return subejct;
+	public String getSubject() {
+		return subject;
 	}
 	public void setSubejct(String subejct) {
-		this.subejct = subejct;
+		this.subject = subejct;
 	}
 	public String getDescription() {
 		return description;
