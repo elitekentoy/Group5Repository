@@ -57,7 +57,7 @@ public class TicketController {
 
 
 	@PostMapping("/ticket/create")
-	public int save(final HttpServletRequest request) throws IOException
+	public int create(final HttpServletRequest request) throws IOException
 	{
 		final BufferedReader body = request.getReader();
 		return service.create(body);
