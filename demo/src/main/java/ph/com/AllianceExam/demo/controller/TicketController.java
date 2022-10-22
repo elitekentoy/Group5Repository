@@ -49,7 +49,7 @@ public class TicketController {
 		return service.deleteByID(id);
 	}
 	
-	@PostMapping("/ticket/{id}")
+	@PostMapping("/ticket/update/{id}")
 	public int udpateByID(final HttpServletRequest request) throws IOException
 	{
 		final BufferedReader body = request.getReader();
