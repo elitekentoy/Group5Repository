@@ -48,7 +48,7 @@ public class TicketRepository implements ITicketRepository {
 	
 	public int deleteByID(final int id)
 	{
-		final String sql = "DELETE FROM allianceschema WHERE userid=?";
+		final String sql = "DELETE FROM ticketmodule WHERE userid=?";
 		final int result = template.update(sql, id);
  
 		return result;
