@@ -39,7 +39,7 @@ public class TicketRepository implements ITicketRepository {
 	}
 	
 	public int create(final Ticket ticket) {
-		final String sql = "INSERT INTO ticket (ticketID, assignee, status, subject, description, tracker) VALUES (?, ?, ?, ?, ?, ?)";
+		final String sql = "INSERT INTO ticketmodule (ticketID, assignee, status, subject, description, tracker) VALUES (?, ?, ?, ?, ?, ?)";
 		final int result = template.update(sql, ticket.getTicketID(), ticket.getAssignee(), ticket.getStatus(), ticket.getSubject(), ticket.getDescription(), ticket.getTracker());
 		
 		return result;
