@@ -1,6 +1,5 @@
 package ph.com.AllianceExam.demo.service;
 
-import java.io.BufferedReader;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -35,11 +34,9 @@ public class TicketService implements ITicketService {
 	}
 
 	
-	public int create(final BufferedReader body)
+	public int create(Ticket ticket)
 	{
-		final Ticket user = gson.fromJson(body, Ticket.class);
-		
-		return repository.create(user);
+		return repository.create(ticket);
 	}
 
 

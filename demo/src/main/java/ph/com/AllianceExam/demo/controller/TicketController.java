@@ -4,9 +4,6 @@ package ph.com.AllianceExam.demo.controller;
 import java.io.IOException;
 import org.springframework.web.bind.annotation.DeleteMapping;
 
-import java.io.BufferedReader;
-
-import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -56,11 +53,10 @@ public class TicketController {
 	}
 
 
-	@PostMapping("/tickets/{id}")
-	public int save(final HttpServletRequest request) throws IOException
-	{
-		final BufferedReader body = request.getReader();
-		return service.create(body);
+	@PostMapping("/ticket/create")
+	public int create(Ticket ticket)
+	{ 
+		return service.create(ticket);
 	}
 	
 
