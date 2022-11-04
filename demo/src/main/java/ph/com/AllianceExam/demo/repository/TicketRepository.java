@@ -30,6 +30,12 @@ public class TicketRepository implements ITicketRepository {
 		}
 		
 	}
+	
+	public int updateTicketAssignee(final Ticket ticket) {
+		final String sql = "UPDATE ticketmodule SET assignee=? where ticketID=?";
+		final int result = template.update(sql,ticket.getAssignee(),ticket.getTicketID());
+		return result;
+	}
 
 	public List<Ticket> retreiveAllTickets() {
 		final String sql = "select * from ticketmodule";
