@@ -49,5 +49,8 @@ public class TicketService implements ITicketService {
 		return repository.updateByID(ticket);
 	}
 
+	public int updateTicketAssignee(Ticket ticket) {
+		return repository.updateTicketAssignee(ticket);
+	}
 	
 }
