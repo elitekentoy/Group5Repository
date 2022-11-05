@@ -10,4 +10,5 @@ public interface ITicketService {
 	public int deleteByID(final int id);
 	public int updateByID(final Ticket ticket);
 	public int updateTicketAssignee(Ticket ticket);
+	public int updateTicketStatus(Ticket ticket);
 }
