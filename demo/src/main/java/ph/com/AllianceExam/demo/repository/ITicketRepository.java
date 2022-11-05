@@ -11,4 +11,5 @@ public interface ITicketRepository {
 	public int deleteByID(final int id);
 	public int updateByID(final Ticket ticket);
 	public int updateTicketAssignee(final Ticket ticket);
+	public int updateTicketStatus(final Ticket ticket);
 }
