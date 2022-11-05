@@ -59,6 +59,10 @@ public class TicketController {
 		return service.create(ticket);
 	}
 	
+	@PostMapping("/ticket/update/assignee")
+	public int updateTicketAssignee(Ticket ticket) {
+		return service.updateTicketAssignee(ticket);
+	}
 
 
 
